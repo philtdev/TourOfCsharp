@@ -29,5 +29,8 @@ public class Program
         // String contains.
         Console.WriteLine(friends.Contains("Scott"));
         Console.WriteLine(friends.Contains("Rebecca"));
+
+        // String to upper case.
+        Console.WriteLine(friends.ToUpper());
     }
 }
