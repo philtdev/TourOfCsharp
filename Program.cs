@@ -20,5 +20,10 @@ public class Program
         string greeting = "      Greetings!  ";
 
         Console.WriteLine(greeting.Trim());
+
+        // String replacement.
+        string friends = $"My friends are {firstFriend} and {secondFriend}";
+
+        Console.WriteLine(friends.Replace("Maria", "John"));
     }
 }
