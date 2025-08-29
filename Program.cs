@@ -25,5 +25,9 @@ public class Program
         string friends = $"My friends are {firstFriend} and {secondFriend}";
 
         Console.WriteLine(friends.Replace("Maria", "John"));
+
+        // String contains.
+        Console.WriteLine(friends.Contains("Scott"));
+        Console.WriteLine(friends.Contains("Rebecca"));
     }
 }
