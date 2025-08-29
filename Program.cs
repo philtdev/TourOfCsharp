@@ -32,5 +32,8 @@ public class Program
 
         // String to upper case.
         Console.WriteLine(friends.ToUpper());
+
+        // String length.
+        Console.WriteLine(friends.Length);
     }
 }
