@@ -15,5 +15,10 @@ public class Program
 
         // Concatenation.
         Console.WriteLine("My friends are " + firstFriend + " and " + secondFriend);
+
+        // String trimming.
+        string greeting = "      Greetings!  ";
+
+        Console.WriteLine(greeting.Trim());
     }
 }
