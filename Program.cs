@@ -6,5 +6,11 @@ public class Program
     {
         // This line prints "Hello, World!" to the console.
         Console.WriteLine("Hello, World!");
+        
+        // Strings and interpolation.
+        string firstFriend = "Maria";
+        string secondFriend = "Scott";
+
+        Console.WriteLine($"My friends are {firstFriend} and {secondFriend}");
     }
 }
