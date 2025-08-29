@@ -4,6 +4,8 @@ public class Program
 {
     static void Main()
     {
+        #region Strings
+
         // This line prints "Hello, World!" to the console.
         Console.WriteLine("Hello, World!");
         
@@ -39,5 +41,18 @@ public class Program
         // String starts with.
         Console.WriteLine(friends.StartsWith("Scott"));
         Console.WriteLine(friends.StartsWith("My"));
+
+        #endregion
+
+        #region Numbers
+
+        // Casting to an integer.
+        int a = (int)42.1;
+        int b = (int)38.3;
+        long c = checked(a + b);
+
+        Console.WriteLine($"The sum of {a} and {b} is {c}");
+
+        #endregion
     }
 }
