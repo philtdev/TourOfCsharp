@@ -35,5 +35,9 @@ public class Program
 
         // String length.
         Console.WriteLine(friends.Length);
+
+        // String starts with.
+        Console.WriteLine(friends.StartsWith("Scott"));
+        Console.WriteLine(friends.StartsWith("My"));
     }
 }
