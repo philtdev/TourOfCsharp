@@ -12,5 +12,8 @@ public class Program
         string secondFriend = "Scott";
 
         Console.WriteLine($"My friends are {firstFriend} and {secondFriend}");
+
+        // Concatenation.
+        Console.WriteLine("My friends are " + firstFriend + " and " + secondFriend);
     }
 }
