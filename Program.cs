@@ -53,6 +53,13 @@ public class Program
 
         Console.WriteLine($"The sum of {a} and {b} is {c}");
 
+        // Decimal numbers.
+        decimal d = 42.1M;
+        decimal e = 38.3M;
+        decimal f = checked(d + e);
+
+        Console.WriteLine($"The sum of {d} and {e} is {f}");
+
         #endregion
     }
 }
