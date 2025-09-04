@@ -10,7 +10,7 @@ public class Program
 
         string firstFriend = "Maria";
         string secondFriend = "Scott";
-        
+
         Console.WriteLine("My friends are " + firstFriend + " and " + secondFriend);
         Console.WriteLine($"My friends are {firstFriend} and {secondFriend}");
 
@@ -91,6 +91,29 @@ public class Program
             Console.WriteLine($"The sum of {g} and {h} is not greater than 10");
             Console.WriteLine($"And the sum of {g} and {h} is not 3");
         }
+
+        #endregion
+
+        #region Branching and while loops
+
+        int counter = 0;
+
+        while (counter < 5)
+        {
+            Console.WriteLine($"Counter is {counter}");
+
+            counter++;
+        }
+
+        counter = 0;
+
+        do
+        {
+            Console.WriteLine($"Counter is {counter}");
+
+            counter++;
+        }
+        while (counter < 10);
 
         #endregion
     }
