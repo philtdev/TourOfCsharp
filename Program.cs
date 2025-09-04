@@ -116,5 +116,32 @@ public class Program
         while (counter < 10);
 
         #endregion
+
+        #region For loops
+
+        for (int j = 0; j < 15; j++)
+        {
+            Console.WriteLine($"Counter is {j}");
+        }
+
+        for (int j = 0; j < 15; j++)
+        {
+            if (j == 3)
+            {
+                Console.WriteLine($"Counter is {j}");
+
+                continue;
+            }
+        }
+
+        for (int row = 1; row < 11; row++)
+        {
+            for (char column = 'a'; column < 'k'; column++)
+            {
+                Console.WriteLine($"Row {row}, Column {column}");
+            }
+        }
+
+        #endregion
     }
 }
