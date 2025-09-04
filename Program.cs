@@ -143,5 +143,26 @@ public class Program
         }
 
         #endregion
+
+        #region List<T> and collections of data
+
+        var names = new List<string> { "Philip", "Maria", "Scott" };
+
+        foreach (var name in names)
+        {
+            Console.WriteLine($"Hello, {name.ToUpper()}!");
+        }
+
+        names.Add("John");
+        names.Add("Sara");
+        names.Add("Grace");
+        names.Remove("Scott");
+
+        foreach (var name in names)
+        {
+            Console.WriteLine($"Hello, {name.ToUpper()}!");
+        }
+
+        #endregion
     }
 }
