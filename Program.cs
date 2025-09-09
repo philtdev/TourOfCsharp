@@ -164,5 +164,32 @@ public class Program
         }
 
         #endregion
+
+        #region Arrays, lists, indexing, and foreach
+
+        Console.WriteLine($"My first friend is {names[0]}");
+        Console.WriteLine($"My second friend is {names[1]}");
+        Console.WriteLine($"My third friend is {names[2]}");
+        Console.WriteLine($"My last friend is {names[^1]}");
+        Console.WriteLine($"My second from last friend is {names[^2]}");
+        Console.WriteLine($"My third from last friend is {names[^3]}");
+
+        Console.WriteLine("My first two friends are:");
+
+        foreach (var name in names[0..2])
+        {
+            Console.WriteLine(name);
+        }
+
+        var namesArr = new string[] { "Philip", "Maria", "Scott" };
+
+        namesArr = [..names, "John"];
+
+        foreach (var name in namesArr)
+        {
+            Console.WriteLine($"Hello, {name}!");
+        }
+
+        #endregion
     }
 }
