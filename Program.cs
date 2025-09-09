@@ -183,12 +183,36 @@ public class Program
 
         var namesArr = new string[] { "Philip", "Maria", "Scott" };
 
-        namesArr = [..names, "John"];
+        namesArr = [.. names, "John"];
 
         foreach (var name in namesArr)
         {
             Console.WriteLine($"Hello, {name}!");
         }
+
+        #endregion
+
+        #region Sorting and searching lists
+
+        names.Sort();
+
+        foreach (var name in names)
+        {
+            Console.WriteLine($"Hello, {name}!");
+        }
+
+        var numbers = new List<int> { 42, 7, 23, 99, 17, 56 };
+        
+        Console.WriteLine($"Number 42 is at index {numbers.IndexOf(42)}");
+
+        numbers.Sort();
+
+        foreach (var number in numbers)
+        {
+            Console.WriteLine($"Number {number}");
+        }
+
+        Console.WriteLine($"Number 42 is at index {numbers.IndexOf(42)}");
 
         #endregion
     }
