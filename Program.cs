@@ -4,9 +4,12 @@ public class Program
 {
     static void Main()
     {
-        #region Strings
+        #region Hello world, introducing strings
 
-        Console.WriteLine("Hello, World!");
+        Console.WriteLine("Hello world, introducing strings");
+        Console.WriteLine("=============\r\n");
+
+        Console.WriteLine("Hello, world!");
 
         string firstFriend = "Maria";
         string secondFriend = "Scott";
@@ -14,11 +17,29 @@ public class Program
         Console.WriteLine("My friends are " + firstFriend + " and " + secondFriend);
         Console.WriteLine($"My friends are {firstFriend} and {secondFriend}");
 
+        Console.WriteLine("\r\n");
+
+        #endregion
+
+        #region The basics of strings
+
+        Console.WriteLine("The basics of strings");
+        Console.WriteLine("=====================\r\n");
+
         string greeting = "      Greetings!  ";
 
         Console.WriteLine(greeting.Trim());
 
         string friends = $"My friends are {firstFriend} and {secondFriend}";
+
+        Console.WriteLine("\r\n");
+
+        #endregion
+
+        #region Searching strings
+
+        Console.WriteLine("Searching strings");
+        Console.WriteLine("=================\r\n");
 
         Console.WriteLine(friends.Replace("Maria", "John"));
         Console.WriteLine(friends.Contains("Scott"));
@@ -28,15 +49,29 @@ public class Program
         Console.WriteLine(friends.StartsWith("Scott"));
         Console.WriteLine(friends.StartsWith("My"));
 
+        Console.WriteLine("\r\n");
+
         #endregion
 
-        #region Numbers
+        #region Numbers, integers, and maths
+
+        Console.WriteLine("Numbers, integers, and maths");
+        Console.WriteLine("============================\r\n");
 
         int a = (int)42.1;
         int b = (int)38.3;
         long c = checked(a + b);
 
         Console.WriteLine($"The sum of {a} and {b} is {c}");
+
+        Console.WriteLine("\r\n");
+
+        #endregion
+
+        #region Numbers, precision, casting, doubles, and more
+
+        Console.WriteLine("Numbers, precision, casting, doubles, and more");
+        Console.WriteLine("==============================================\r\n");
 
         decimal d = 42.1M;
         decimal e = 38.3M;
@@ -48,9 +83,14 @@ public class Program
         int h = 2;
         int i = checked(g + h);
 
+        Console.WriteLine("\r\n");
+
         #endregion
 
         #region Branching, ifs, and conditional logic
+
+        Console.WriteLine("Branching, ifs, and conditional logic");
+        Console.WriteLine("=====================================\r\n");
 
         if (d + e > 10)
         {
@@ -92,9 +132,14 @@ public class Program
             Console.WriteLine($"And the sum of {g} and {h} is not 3");
         }
 
+        Console.WriteLine("\r\n");
+
         #endregion
 
         #region Branching and while loops
+
+        Console.WriteLine("Branching and while loops");
+        Console.WriteLine("=========================\r\n");
 
         int counter = 0;
 
@@ -115,9 +160,14 @@ public class Program
         }
         while (counter < 10);
 
+        Console.WriteLine("\r\n");
+
         #endregion
 
         #region For loops
+
+        Console.WriteLine("For loops");
+        Console.WriteLine("=========\r\n");
 
         for (int j = 0; j < 15; j++)
         {
@@ -142,9 +192,14 @@ public class Program
             }
         }
 
+        Console.WriteLine("\r\n");
+
         #endregion
 
         #region List<T> and collections of data
+
+        Console.WriteLine("List<T> and collections of data");
+        Console.WriteLine("===============================\r\n");
 
         var names = new List<string> { "Philip", "Maria", "Scott" };
 
@@ -163,9 +218,14 @@ public class Program
             Console.WriteLine($"Hello, {name.ToUpper()}!");
         }
 
+        Console.WriteLine("\r\n");
+
         #endregion
 
         #region Arrays, lists, indexing, and foreach
+
+        Console.WriteLine("Arrays, lists, indexing, and foreach");
+        Console.WriteLine("====================================\r\n");
 
         Console.WriteLine($"My first friend is {names[0]}");
         Console.WriteLine($"My second friend is {names[1]}");
@@ -190,9 +250,14 @@ public class Program
             Console.WriteLine($"Hello, {name}!");
         }
 
+        Console.WriteLine("\r\n");
+
         #endregion
 
         #region Sorting and searching lists
+
+        Console.WriteLine("Sorting and searching lists");
+        Console.WriteLine("===========================\r\n");
 
         names.Sort();
 
@@ -213,6 +278,8 @@ public class Program
         }
 
         Console.WriteLine($"Number 42 is at index {numbers.IndexOf(42)}");
+
+        Console.WriteLine("\r\n");
 
         #endregion
     }
