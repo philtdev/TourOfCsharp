@@ -327,5 +327,25 @@ public class Program
         Console.WriteLine("\r\n");
 
         #endregion
+
+        #region LINQ method syntax versus query
+
+        Console.WriteLine("LINQ method syntax versus query");
+        Console.WriteLine("===============================\r\n");
+
+        var scoreQueryAlt = scores
+            .Where(s => s > 80)
+            .OrderByDescending(s => s);
+
+        List<int> scoresList = scoreQueryAlt.ToList();
+
+        foreach (var score in scoresList)
+        {
+            Console.WriteLine(score);
+        }
+
+        Console.WriteLine("\r\n");
+
+        #endregion
     }
 }
