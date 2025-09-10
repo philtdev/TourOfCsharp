@@ -288,17 +288,40 @@ public class Program
         Console.WriteLine("Language Integrated Query (LINQ) and IEnumerable");
         Console.WriteLine("================================================\r\n");
 
-        List<int> scores = [90, 71, 82, 93, 75, 82];
+        List<int> scores = [90, 71, 82, 93, 75, 100];
 
         IEnumerable<int> scoreQuery =
             from score in scores
             where score > 80
-            orderby score descending
             select score;
 
         foreach (int i in scoreQuery)
         {
             Console.WriteLine(i);
+        }
+
+        Console.WriteLine("\r\n");
+
+        #endregion
+
+        #region LINQ query expressions from, where, orderby, and select
+
+        Console.WriteLine("LINQ query expressions from, where, orderby, and select");
+        Console.WriteLine("=======================================================\r\n");
+
+        IEnumerable<string> scoreQueryStr =
+            from score in scores
+            where score > 80
+            orderby score descending
+            select $"The score is {score}";
+
+        int scoreCount = scoreQueryStr.Count();
+
+        Console.WriteLine($"There are {scoreCount} scores greater than 80");
+
+        foreach (string s in scoreQueryStr)
+        {
+            Console.WriteLine(s);
         }
 
         Console.WriteLine("\r\n");
