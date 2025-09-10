@@ -79,10 +79,6 @@ public class Program
 
         Console.WriteLine($"The sum of {d} and {e} is {f}");
 
-        int g = 1;
-        int h = 2;
-        int i = checked(g + h);
-
         Console.WriteLine("\r\n");
 
         #endregion
@@ -101,35 +97,39 @@ public class Program
             Console.WriteLine($"The sum of {d} and {e} is not greater than 10");
         }
 
-        if (i > 10)
+        a = 1;
+        b = 2;
+        int g = checked(a + b);
+
+        if (g > 10)
         {
-            Console.WriteLine($"The sum of {g} and {h} is greater than 10");
+            Console.WriteLine($"The sum of {a} and {b} is greater than 10");
         }
         else
         {
-            Console.WriteLine($"The sum of {g} and {h} is not greater than 10");
+            Console.WriteLine($"The sum of {a} and {b} is not greater than 10");
         }
 
-        if ((d + e > 10) && (i == 3))
+        if ((d + e > 10) && (g == 3))
         {
             Console.WriteLine($"The sum of {d} and {e} is greater than 10");
-            Console.WriteLine($"And the sum of {g} and {h} is 3");
+            Console.WriteLine($"And the sum of {a} and {b} is 3");
         }
         else
         {
-            Console.WriteLine($"The sum of {g} and {h} is not greater than 10");
-            Console.WriteLine($"And/or the sum of {g} and {h} is not 3");
+            Console.WriteLine($"The sum of {a} and {b} is not greater than 10");
+            Console.WriteLine($"And/or the sum of {a} and {b} is not 3");
         }
 
-        if ((d + e > 10) || (i == 3))
+        if ((d + e > 10) || (g == 3))
         {
             Console.WriteLine($"Either the sum of {d} and {e} is greater than 10");
-            Console.WriteLine($"Or the sum of {g} and {h} is 3");
+            Console.WriteLine($"Or the sum of {a} and {b} is 3");
         }
         else
         {
-            Console.WriteLine($"The sum of {g} and {h} is not greater than 10");
-            Console.WriteLine($"And the sum of {g} and {h} is not 3");
+            Console.WriteLine($"The sum of {a} and {b} is not greater than 10");
+            Console.WriteLine($"And the sum of {a} and {b} is not 3");
         }
 
         Console.WriteLine("\r\n");
@@ -169,16 +169,16 @@ public class Program
         Console.WriteLine("For loops");
         Console.WriteLine("=========\r\n");
 
-        for (int j = 0; j < 15; j++)
+        for (int i = 0; i < 15; i++)
         {
-            Console.WriteLine($"Counter is {j}");
+            Console.WriteLine($"Counter is {i}");
         }
 
-        for (int j = 0; j < 15; j++)
+        for (int i = 0; i < 15; i++)
         {
-            if (j == 3)
+            if (i == 3)
             {
-                Console.WriteLine($"Counter is {j}");
+                Console.WriteLine($"Counter is {i}");
 
                 continue;
             }
@@ -267,7 +267,7 @@ public class Program
         }
 
         var numbers = new List<int> { 42, 7, 23, 99, 17, 56 };
-        
+
         Console.WriteLine($"Number 42 is at index {numbers.IndexOf(42)}");
 
         numbers.Sort();
@@ -278,6 +278,28 @@ public class Program
         }
 
         Console.WriteLine($"Number 42 is at index {numbers.IndexOf(42)}");
+
+        Console.WriteLine("\r\n");
+
+        #endregion
+
+        #region Language Integrated Query (LINQ) and IEnumerable
+
+        Console.WriteLine("Language Integrated Query (LINQ) and IEnumerable");
+        Console.WriteLine("================================================\r\n");
+
+        List<int> scores = [90, 71, 82, 93, 75, 82];
+
+        IEnumerable<int> scoreQuery =
+            from score in scores
+            where score > 80
+            orderby score descending
+            select score;
+
+        foreach (int i in scoreQuery)
+        {
+            Console.WriteLine(i);
+        }
 
         Console.WriteLine("\r\n");
 
