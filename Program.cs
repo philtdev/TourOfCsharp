@@ -347,5 +347,28 @@ public class Program
         Console.WriteLine("\r\n");
 
         #endregion
+
+        #region Object-oriented programming (OOP)
+
+        Console.WriteLine("Object-oriented programming (OOP)");
+        Console.WriteLine("=================================\r\n");
+
+        var p1 = new Person("Samuel", "Wadsworth", new DateOnly(1987, 7, 8));
+        var p2 = new Person("Bradley", "Mayfield", new DateOnly(1966, 1, 12));
+
+        List<Person> people = [p1, p2];
+
+        Console.WriteLine($"There are {people.Count} people in the list");
+
+        Console.WriteLine("\r\n");
+
+        #endregion
     }
+}
+
+public class Person(string firstName, string lastName, DateOnly birthday)
+{
+    public string FirstName { get; } = firstName;
+    public string LastName { get; } = lastName;
+    public DateOnly Birthday { get; } = birthday;
 }
