@@ -363,6 +363,34 @@ public class Program
         Console.WriteLine("\r\n");
 
         #endregion
+
+        #region OOP with derived or abstract classes, overrides, IEnumerable
+
+        Console.WriteLine("OOP with derived or abstract classes, overrides, IEnumerable");
+        Console.WriteLine("============================================================\r\n");
+
+        p1.Pets.Add(new Dog("Pippin"));
+        p1.Pets.Add(new Dog("Rover"));
+
+        p2.Pets.Add(new Cat("Jonesy"));
+        p2.Pets.Add(new Cat("Daisy"));
+        p2.Pets.Add(new Parrot("Beaker"));
+
+        foreach (var person in people)
+        {
+            Console.WriteLine(person);
+
+            foreach (var pet in person.Pets)
+            {
+                Console.WriteLine(pet);
+            }
+
+            Console.WriteLine();
+        }
+
+        Console.WriteLine("\r\n");
+
+        #endregion
     }
 }
 
@@ -371,4 +399,37 @@ public class Person(string firstName, string lastName, DateOnly birthday)
     public string FirstName { get; } = firstName;
     public string LastName { get; } = lastName;
     public DateOnly Birthday { get; } = birthday;
+    public List<Pet> Pets { get; } = new();
+
+    public override string ToString()
+    {
+        return $"{FirstName} {LastName} has {Pets.Count} pets:";
+    }
 }
+
+public abstract class Pet(string firstName)
+{
+    public string FirstName { get; } = firstName;
+    public abstract string Speak();
+
+    public override string ToString()
+    {
+        return $"{FirstName} is a {GetType().Name.ToLower()}. {Speak()}";
+    }
+}
+
+public class Cat(string firstName) : Pet(firstName)
+{
+    public override string Speak() => "Meow!";
+}
+
+public class Dog(string firstName) : Pet(firstName)
+{
+    public override string Speak() => "Bark!";
+}
+
+public class Parrot(string firstName) : Pet(firstName)
+{
+    public override string Speak() => "Squawk!";
+}
+
